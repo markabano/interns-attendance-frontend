@@ -1,16 +1,39 @@
-# React + Vite
+🎨 Internship Attendance System — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Internship Attendance System Frontend provides an intuitive and user-friendly interface for interns and admins to view, manage, and track attendance.
+It solves the real-world problem of inaccurate hour computation and manual attendance logging by offering a clear and accessible UI connected to the backend API.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👤 Separate Interfaces for Interns & Admins
 
-## React Compiler
+🕒 Real-time Clock-In / Clock-Out Interface
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📊 Admin Dashboard
 
-## Expanding the ESLint configuration
+📅 Visual Attendance Logs & History
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔐 Login & Registration Pages
+
+📱 Responsive UI Design
+
+🌐 Integration with Backend API
+
+⚠️ Error handling, loading states, and protected routes
+
+🛠️ Tech Stack
+
+React.js
+
+TailwindCSS or any CSS framework you're using
+
+Axios / Fetch API
+
+React Router
+
+JWT Authentication Handling
+
+🎯 Why This Was Built
+
+I personally experienced the frustration of incorrect hour logs during internship.
+This frontend helps display accurate computations and makes attendance tracking transparent, fair, and easy to use for everyone.
