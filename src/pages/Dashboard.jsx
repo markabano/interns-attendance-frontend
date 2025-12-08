@@ -1,47 +1,17 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import useAuth from "../hooks/useAuth";
-import { LogOut, User, Calendar, Clock, LayoutDashboard } from "lucide-react";
+import Sidebar from "../components/Sidebar";
 
 export default function Dashboard() {
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   return (
     <div className="min-h-screen flex bg-linear-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white">
       {/* SIDEBAR */}
-      <aside className="w-64 hidden md:flex flex-col p-6 backdrop-blur-xl bg-white/5 border-r border-white/10 shadow-xl">
-        <div className="flex items-center gap-3 mb-10">
-          <LayoutDashboard className="w-7 h-7 text-blue-400" />
-          <h1 className="text-xl font-semibold tracking-wide">Dashboard</h1>
-        </div>
-
-        <nav className="flex flex-col gap-2">
-          <button className="p-3 flex items-center gap-3 rounded-xl hover:bg-white/10 transition">
-            <User className="w-5 h-5 text-blue-300" />
-            Profile
-          </button>
-
-          <button className="p-3 flex items-center gap-3 rounded-xl hover:bg-white/10 transition">
-            <Clock className="w-5 h-5 text-blue-300" />
-            Attendance
-          </button>
-
-          <button className="p-3 flex items-center gap-3 rounded-xl hover:bg-white/10 transition">
-            <Calendar className="w-5 h-5 text-blue-300" />
-            Leave Requests
-          </button>
-
-          <button
-            onClick={logout}
-            className="p-3 mt-auto flex items-center gap-3 text-red-300 rounded-xl hover:bg-red-500/20 transition"
-          >
-            <LogOut className="w-5 h-5" />
-            Logout
-          </button>
-        </nav>
-      </aside>
+      <Sidebar />
 
       {/* MAIN CONTENT */}
-      <main className="flex-1 p-6 md:p-10">
+      <main className="flex-1 p-6 md:p-10 pt-20 md:pt-10">
         {/* GREETING */}
         <motion.h2
           initial={{ opacity: 0, y: -15 }}

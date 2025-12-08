@@ -32,11 +32,11 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-linear-to-br from-slate-900 via-purple-900 to-slate-900 px-4">
+    <div className="min-h-screen w-full flex items-center justify-center bg-linear-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] px-4">
       {/* Background Glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-purple-600 blur-[150px] opacity-20"></div>
-        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-indigo-600 blur-[150px] opacity-20"></div>
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#0f172a] blur-[150px] opacity-20"></div>
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#0f172a] blur-[150px] opacity-20"></div>
       </div>
 
       <motion.div
@@ -70,7 +70,7 @@ const Login = () => {
             <label className="text-white/80 text-sm font-medium">Email</label>
             <input
               type="email"
-              className="mt-1 w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-400 text-white placeholder-white/40 transition-all"
+              className="mt-1 w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-white/40 transition-all"
               placeholder="Enter your email..."
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -84,7 +84,7 @@ const Login = () => {
             </label>
             <input
               type="password"
-              className="mt-1 w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-400 text-white placeholder-white/40 transition-all"
+              className="mt-1 w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-white/40 transition-all"
               placeholder="Enter password..."
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -95,7 +95,7 @@ const Login = () => {
           <motion.button
             whileTap={{ scale: 0.97 }}
             disabled={loading}
-            className="w-full py-3 bg-purple-600 hover:bg-purple-700 active:bg-purple-800 disabled:bg-purple-600/50 rounded-xl text-white font-semibold tracking-wide transition-all shadow-lg shadow-purple-600/30"
+            className="w-full py-3 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 disabled:bg-blue-600/50 rounded-xl text-white font-semibold tracking-wide transition-all shadow-lg shadow-blue-600/30"
           >
             {loading ? "Logging in..." : "Login"}
           </motion.button>

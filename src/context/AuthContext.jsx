@@ -32,6 +32,7 @@ export const AuthProvider = ({ children }) => {
   const login = (userData, token) => {
     if (!userData || typeof userData !== "object") {
       console.error("INVALID USER DATA:", userData);
+      console.log(userData);
       return;
     }
 
