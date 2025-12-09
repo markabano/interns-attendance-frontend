@@ -8,6 +8,7 @@ import {
   X,
   LayoutDashboard,
   User,
+  Settings,
 } from "lucide-react";
 import { useState } from "react";
 import useAuth from "../hooks/useAuth";
@@ -37,6 +38,11 @@ const NAV_ITEMS = [
     icon: User,
     label: "Manage Intern",
     path: "/manageintern",
+  },
+  {
+    icon: Settings,
+    label: "Settings",
+    path: "/settings",
   },
 ];
 
