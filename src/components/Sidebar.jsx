@@ -7,6 +7,8 @@ import {
   Menu,
   X,
   LayoutDashboard,
+  User,
+  Settings,
 } from "lucide-react";
 import { useState } from "react";
 import useAuth from "../hooks/useAuth";
@@ -31,6 +33,16 @@ const NAV_ITEMS = [
     icon: Calendar,
     label: "Leave Requests",
     path: "/leave",
+  },
+  {
+    icon: User,
+    label: "Manage Intern",
+    path: "/manageintern",
+  },
+  {
+    icon: Settings,
+    label: "Settings",
+    path: "/settings",
   },
 ];
 
@@ -108,14 +120,19 @@ const MobileOverlay = ({ isOpen, onClick }) =>
   isOpen ? <div className={STYLES.mobileOverlay} onClick={onClick} /> : null;
 
 const CollapseButton = ({ collapsed, onClick }) => (
-  <div className="flex justify-end mb-6">
-    <button onClick={onClick} className={STYLES.collapseButton}>
-      {collapsed ? (
-        <ChevronLast className="w-5 h-5 text-blue-300" />
-      ) : (
-        <ChevronFirst className="w-5 h-5 text-blue-300" />
-      )}
-    </button>
+  <div className="flex items-center mb-6">
+    <h1 className={collapsed ? "hidden" : "font-bold w-full text-2xl"}>
+      Internship Attendance
+    </h1>
+    <div className="flex justify-end">
+      <button onClick={onClick} className={STYLES.collapseButton}>
+        {collapsed ? (
+          <ChevronLast className="w-5 h-5 text-blue-300" />
+        ) : (
+          <ChevronFirst className="w-5 h-5 text-blue-300" />
+        )}
+      </button>
+    </div>
   </div>
 );
 
@@ -291,7 +308,7 @@ function Sidebar() {
 
         <LogoutSection collapsed={collapsed} onClick={handleShowLogout} />
       </aside>
-      ``
+
       <LogoutConfirmModal
         isOpen={showLogoutConfirm}
         onCancel={handleCancelLogout}
