@@ -5,6 +5,7 @@ import Login from "../pages/auth/Login";
 import Dashboard from "../pages/Dashboard";
 import ManageIntern from "../pages/ManageIntern";
 import Settings from "../pages/Settings";
+import Attendance from "../pages/Attendance";
 
 const AppRouter = () => {
   return (
@@ -18,6 +19,14 @@ const AppRouter = () => {
         element={
           <PrivateRoute>
             <Dashboard />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/attendance"
+        element={
+          <PrivateRoute>
+            <Attendance />
           </PrivateRoute>
         }
       />
